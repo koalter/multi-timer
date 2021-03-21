@@ -1,0 +1,25 @@
+main {
+    min-height: 50vh;
+    min-width: 40vw;
+    border: 1px solid white;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    color: white;
+}
+
+.Timer {
+    /* border: 1px solid white; */
+    display: flex;
+    align-items: center;
+}
+.Timer select {
+    height: 38px;
+}
+
+.Timer_list ol li {
+    /* list-style: none;
+    font-size: 24px; */
+}

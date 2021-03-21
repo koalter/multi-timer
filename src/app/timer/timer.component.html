@@ -1,17 +1,20 @@
-<div>
-    <select name="hours" id="hours" (change)="hourChangeHandler($event)">
-        <option *ngFor="let hour of hours; index as i" (value)="hour">{{ hour.toLocaleString(undefined, { minimumIntegerDigits: 2 }) }}</option>
-    </select>
-    <select name="minutes" id="minutes" (change)="minuteChangeHandler($event)">
-        <option *ngFor="let minute of minutes; index as i" (value)="minute">{{ minute.toLocaleString(undefined, { minimumIntegerDigits: 2 }) }}</option>
-    </select>
-    <select name="seconds" id="seconds" (change)="secondChangeHandler($event)">
-        <option *ngFor="let second of seconds; index as i" (value)="second">{{ second.toLocaleString(undefined, { minimumIntegerDigits: 2 }) }}</option>
-    </select>
-    <button class="btn-primary" (click)="newTimer()">+</button>
-</div>
-<div>
-    <ol>
-        <li *ngFor="let counter of counterList">{{ toTimeString(counter) }}</li>
-    </ol>
-</div>
+<main>
+    <h1>Multi-Timer</h1>
+    <div class="Timer">
+        <select name="hours" id="hours" (change)="hourChangeHandler($event)">
+            <option *ngFor="let hour of hours; index as i" (value)="hour">{{ hour.toLocaleString(undefined, { minimumIntegerDigits: 2 }) }}</option>
+        </select>
+        <select name="minutes" id="minutes" (change)="minuteChangeHandler($event)">
+            <option *ngFor="let minute of minutes; index as i" (value)="minute">{{ minute.toLocaleString(undefined, { minimumIntegerDigits: 2 }) }}</option>
+        </select>
+        <select name="seconds" id="seconds" (change)="secondChangeHandler($event)">
+            <option *ngFor="let second of seconds; index as i" (value)="second">{{ second.toLocaleString(undefined, { minimumIntegerDigits: 2 }) }}</option>
+        </select>
+        <button class="btn btn-primary" (click)="newTimer()">Agregar</button>
+    </div>
+    <div class="Timer_list">
+        <ol>
+            <li *ngFor="let counter of counterList">{{ toTimeString(counter) }}</li>
+        </ol>
+    </div>
+</main>
